@@ -1,0 +1,39 @@
+// Source code is decompiled from a .class file using FernFlower decompiler.
+import java.util.Scanner;
+
+public class AvarageOfElements {
+   public AvarageOfElements() {
+   }
+
+   public static int sumOfElements(int[] var0) {
+      int var1 = 0;
+
+      for(int var2 = 0; var2 < var0.length; ++var2) {
+         var1 += var0[var2];
+      }
+
+      return var1 / var0.length;
+   }
+
+   public static void main(String[] var0) {
+      Scanner var1 = new Scanner(System.in);
+      System.out.print("Enter Limit of an Array :- ");
+      int var2 = var1.nextInt();
+      int[] var3 = new int[var2];
+      System.out.println("Enter Elements into the Array :- ");
+
+      int var4;
+      for(var4 = 0; var4 < var2; ++var4) {
+         var3[var4] = var1.nextInt();
+      }
+
+      System.out.print("Elements of the Array are :- ");
+
+      for(var4 = 0; var4 < var2; ++var4) {
+         System.out.print(var3[var4] + " ");
+      }
+
+      float var5 = (float)sumOfElements(var3);
+      System.out.println("\nAverage of elements are :- " + var5);
+   }
+}
