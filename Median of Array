@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class MideanOfArray {
+    public static void mideanOfArray(int []arr){
+        int n=arr.length;
+        if(arr.length%2==0){
+            System.out.println("\nThe Mideans are :- "+arr[(n/2)-1]+" and "+arr[n/2]);
+        }
+        else{
+            System.out.println("\nThe Midean is :- "+arr[n/2]);
+        }
+    } 
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter Limit of an Array :- ");
+        int n=sc.nextInt();
+        int []arr=new int[n];
+        System.out.println("Enter Elements into the Array :- ");
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        System.out.print("Elements of the Array are :- ");
+        for(int i=0;i<n;i++){
+            System.out.print(arr[i]+" ");
+        }
+        mideanOfArray(arr);
+        sc.close();
+    }
+}
