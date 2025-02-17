@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class DecreasingNumber {
+    public static void printDecreasingNumber(int []arr){
+        for(int i=0;i<arr.length;i++){
+            for(int j=i+1;j<arr.length;j++){
+                if(arr[i]<arr[j]){
+                    int temp=arr[i];
+                    arr[i]=arr[j];
+                    arr[j]=temp;
+                }
+            }
+        }
+        System.out.print("\nAfter Arranging Array :- ");
+        for(int i=0;i<arr.length;i++){
+            System.out.print(arr[i]+" ");
+        }
+    }
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter Limit of an Array :- ");
+        int n=sc.nextInt();
+        int []arr=new int[n];
+        System.out.println("Enter Elements into the Array :- ");
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        System.out.print("Before Arranging Array :- ");
+        for(int i=0;i<n;i++){
+            System.out.print(arr[i]+" ");
+        }
+        printDecreasingNumber(arr);
+        sc.close();
+    }
+}
